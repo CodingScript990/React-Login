@@ -1,7 +1,4 @@
 // key.js
-
-const { required } = require("nodemon/lib/config");
-
 // process method Node Env
 if (process.env.NODE_ENV === "production") {
   // module exports url('/prod')

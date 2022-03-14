@@ -104,22 +104,12 @@ userSchema.statics.findByToken = function (token, cb) {
   // token is decode.
   jwt.verify(token, "secretToken", function (err, decoded) {
     // user id find and client in token data === DB save token check[Correspond(일치하는가)]?
-    user.findOne(
-      {
-        // where data?
-        // _id
-        _id: decoded,
-        // where data?
-        // token
-        token: token,
-      },
-      function (err, user) {
-        // err![false]
-        if (err) return cb(err);
-        // success[true]
-        cb(null, user);
-      }
-    );
+    user.findOne({ _id: decoded, token: token }, function (err, user) {
+      // err![False]
+      if (err) return cb(err);
+      // success[True]
+      cb(null, user);
+    });
   });
 };
 
