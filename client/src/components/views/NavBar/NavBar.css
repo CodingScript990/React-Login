@@ -1,0 +1,15 @@
+/* NavBar.css */
+.navbar-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.navbar-right {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: right;
+  justify-items: center;
+}

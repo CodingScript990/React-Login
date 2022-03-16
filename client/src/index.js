@@ -4,10 +4,25 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
+// bootstrap
+import "bootstrap/dist/css/bootstrap.min.css";
+// BrowserRouter
+import { BrowserRouter as Container } from "react-router-dom";
+// store
+import { createStore } from "redux";
+import contactReducer from "./redux/reducers/ContactReducer";
+import { composeWithDevTools } from "redux-devtools-extension";
+import { Provider } from "react-redux";
+
+// store(createStore)
+const store = createStore(contactReducer, composeWithDevTools());
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store={store}>
+    <Container>
+      <App />
+    </Container>
+  </Provider>,
   document.getElementById("root")
 );
 
