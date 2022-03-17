@@ -7,21 +7,14 @@ import reportWebVitals from "./reportWebVitals";
 // bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
 // BrowserRouter
-import { BrowserRouter as Container } from "react-router-dom";
-// store
-import { createStore } from "redux";
-import contactReducer from "./redux/reducers/ContactReducer";
-import { composeWithDevTools } from "redux-devtools-extension";
+// provider
 import { Provider } from "react-redux";
-
-// store(createStore)
-const store = createStore(contactReducer, composeWithDevTools());
+// store
+import store from "./app/store";
 
 ReactDOM.render(
   <Provider store={store}>
-    <Container>
-      <App />
-    </Container>
+    <App />
   </Provider>,
   document.getElementById("root")
 );

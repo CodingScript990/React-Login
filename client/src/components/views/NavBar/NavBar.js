@@ -1,6 +1,7 @@
 // NavBar.js
 import React from "react";
 import { Link } from "react-router-dom";
+import Logout from "../Logout/Logout";
 import "./NavBar.css";
 
 function NavBar() {
@@ -12,6 +13,7 @@ function NavBar() {
         </Link>
       </div>
       <div className="navbar-right">
+        <Logout />
         <Link to="/login" className="btn btn-secondary">
           Login
         </Link>

@@ -1,0 +1,23 @@
+/* Logout.css */
+.logout__container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.user__name {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.logout__btn {
+  min-width: 50px;
+  padding: 5px;
+  background-color: #333333;
+  color: #ffffff;
+  border-radius: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
